@@ -10,7 +10,6 @@ Form1_Load
 btnOpen1_Click
 btnOpen2_Click
 tmrPortChk_Tick
-tabControl1_SelectedIndexChanged
 btnClearBuf_Click
 btnReCnt_Click
 函数:
@@ -24,12 +23,12 @@ namespace GroundStation
 {
     public partial class Form1 : Form
     {
-        string[] LastPorts = { };
-        const string version = "Ground Station V1.01";
-        long TxCount = 0, RxCount = 0;
-        Protocol ptcl1 = new Protocol();
-        Protocol ptcl2 = new Protocol();
-        bool sp1Open, sp2Open;
+        private string[] LastPorts = { };
+        private const string version = "Ground Station V1.02";
+        private long TxCount = 0, RxCount = 0;
+        private readonly Protocol ptcl1 = new Protocol();
+        private readonly Protocol ptcl2 = new Protocol();
+        private bool sp1Open, sp2Open;
         public Form1()
         {
             InitializeComponent();

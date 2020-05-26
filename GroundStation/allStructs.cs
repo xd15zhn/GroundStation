@@ -21,5 +21,6 @@
         public const byte ctrlOut = 0xAA;
         public const byte chart1 = 0xB1;
         public const byte chart2 = 0xB2;
+        public const byte highspeed = 0x40;
     }
 }

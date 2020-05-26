@@ -6,20 +6,22 @@ using System.Drawing;
 using System.Windows.Forms.DataVisualization.Charting;
 /**************文件说明**********************
 波形显示
+事件:
+cbxData_CheckedChanged
+函数:
 ChartInit
 Chart_Update
 Chart_Display
 Chart_Clear
-cbxData_CheckedChanged
 ********************************************/
 
 namespace GroundStation
 {
     partial class Form1
     {
-        private byte DataLen = 100;
-        private Queue<double>[] DataQueue = new Queue<double>[8];
-        CheckBox[] cbxData = new CheckBox[8];
+        private const byte DataLen = 100;
+        private readonly Queue<double>[] DataQueue = new Queue<double>[8];
+        private readonly CheckBox[] cbxData = new CheckBox[8];
 
         /***********************
          图表初始化
@@ -82,6 +84,7 @@ namespace GroundStation
         private void Chart_Display()
         {
             if (!serialPort1.IsOpen) return;
+            if (!cbxDisplay.Checked) return;
             byte channel = 0;
             for (int i = 0; i < 8; i++)
                 if (cbxData[i].Checked)

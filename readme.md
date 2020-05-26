@@ -1,34 +1,77 @@
+# Î÷µçº½Ð­Î¢ÐÍËÄÖáADRC°æ±¾µØÃæÕ¾
+
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/090e9b44b3934c0483ee238f9ae0fdff)](https://app.codacy.com/gh/xdu-aero-association/GroundStation?utm_source=github.com&utm_medium=referral&utm_content=xdu-aero-association/GroundStation&utm_campaign=Badge_Grade_Dashboard)
+
+![logo](https://github.com/xdu-aero-association/GroundStation/raw/master/logo.jpg)
+
+## Status
+
+![stars](https://img.shields.io/github/stars/xdu-aero-association/GroundStation.svg) ![forks](https://img.shields.io/github/forks/xdu-aero-association/GroundStation.svg) ![tag](https://img.shields.io/github/tag/xdu-aero-association/GroundStation.svg) ![release](https://img.shields.io/github/release/xdu-aero-association/GroundStation.svg) ![issues](https://img.shields.io/github/issues/xdu-aero-association/GroundStation.svg)
+
+## Overview
+
+ÕâÊÇÎ÷µçº½Ð­Î¢ÐÍËÄÖá·ÉÐÐÆ÷ADRC°æ±¾·É¿Ø¶ËµÄÉÏÎ»»úÔ´´úÂë£¬¸Ã°æ±¾ÓëPID°æ±¾´®¿ÚÍ¨Ñ¶Ð­Òé²»Í¬£¬Òò´Ë²»ÊÊÓÃÓÚPID°æ±¾µÄ´úÂë¡£
+
+ÕâÊÇÒ»¸ö[Visual Studio 2019](https://visualstudio.microsoft.com/zh-hans/vs/)¹¤³Ì£¬´ò¿ª×îÐÂ°æVisual Studio 2019µ¼Èë¹¤³ÌÎÄ¼þ»òË«»÷sln¹¤³ÌÎÄ¼þ¼´¿É´ò¿ª¸Ã¹¤³ÌÔ´Âë¡£
+
+ÐÞ¸Ä´úÂëµÄÊ±ºò£¬ÇëÔÚmaster·ÖÖ§ÏÂÃæÐÂ½¨Ò»¸öÌØÐÔ·ÖÖ§£¬ÔÚ¸ÃÌØÐÔ·ÖÖ§ÏÂ½øÐÐ´úÂëµÄÐÞ¸ÄÈ»ºóÍ¨¹ý¸Ã·ÖÖ§Ö´ÐÐpull request²Ù×÷¡£È·ÈÏÎÞÎóºóÔÙºÏ²¢ÖÁÖ÷·ÖÖ§¡£
+
+bugÏà¹ØºÍ½¨ÒéÇëÒÆ²½ÖÁissueÀ¸Ä¿
+
 # Ê¹ÓÃËµÃ÷
+
 c#ÉÏÎ»»ú
 
-°æ±¾ v1.00
+°æ±¾ v1.02
 
 ÓÐ»ù±¾ÊÕ·¢¡¢·ÉÐÐ¿ØÖÆ¡¢²ÎÊýÉèÖÃ¡¢²¨ÐÎÏÔÊ¾4¸ö±êÇ©¡£
 
 ¿É×Ô¶¯Ê¶±ð¿ÉÓÃ¶Ë¿ÚºÅ¡£
 
+²¿·ÖÄÚÈÝ¹Ø±ÕÖØÆôºó²»»á¶ªÊ§¡£
+
 [·ÉÐÐÆ÷¿ØÖÆÊ¾Àý](https://github.com/xd15zhn/drone)
 
 ### »ù±¾ÊÕ·¢
+
+![»ù±¾ÊÕ·¢](https://github.com/xd15zhn/GroundStation/raw/master/image/GS_base.png)
+
 3¸ö·¢ËÍ´°¿Ú¶ÀÁ¢¡£µÚÒ»¸öÖ§³Ö¶¨Ê±·¢ËÍ¡£Ç°Á½¸öÎª¶àÐÐ£¬µÚÈý¸öÎªµ¥ÐÐ¡£
 
+3¸ö·¢ËÍ´°¿ÚµÄÄÚÈÝÔÚ¹Ø±ÕÖØÆôºó²»»á¶ªÊ§¡£
+
 ### ·ÉÐÐ¿ØÖÆ
+
+![·ÉÐÐ¿ØÖÆ](https://github.com/xd15zhn/GroundStation/raw/master/image/GS_ctrl.png)
+
+·É»ú½âËøÁ÷³Ì:
+
+´ò¿ªÖ÷´®¿Ú->´ò¿ªÍâ²¿ÊäÈë´®¿Ú(¿ÉÑ¡)->½«ÓÍÃÅÍ¨µÀ²¦µ½µ×->µã»÷"¿ªÊ¼·¢ËÍ¡°->µã»÷"½âËø¡°
+
 ·¢ËÍÇÐ»»Ä£Ê½Ö¸ÁîÊ±Í¬²½·¢ËÍËø¶¨Ö¸Áî¡£
 
-ÓÐ2ÖÖ·½·¨¿ÉÒÔ½øÐÐ·ÉÐÐ¿ØÖÆ¡£µÚÒ»ÖÖÊÇÔÚÇÐ»»µ½'·ÉÐÐ¿ØÖÆ'±êÇ©ÏÂÓÃ¼üÅÌWSADºÍIKJL½øÐÐ·ÉÐÐ¿ØÖÆ£»
+ÓÐ2ÖÖ·½·¨¿ÉÒÔ½øÐÐ·ÉÐÐ¿ØÖÆ¡£µÚÒ»ÖÖÊÇÓÃ¼üÅÌWSADºÍIKJL½øÐÐ·ÉÐÐ¿ØÖÆ£»
 µÚ¶þÖÖÊÇ·ûºÏÐ­ÒéµÄÍâ²¿´®¿ÚÊäÈë£¬¿ÉÊ¹ÓÃ´¦ÀíÆ÷½«Ò£¿ØÆ÷½ÓÊÕ»úµÄPWMÐÅºÅ×ª»»³É´®¿ÚÊý¾ÝÍ¨¹ý'·ÉÐÐ¿ØÖÆ'±êÇ©ÏÂµÄ´®¿ÚÊäÈë¡£
 µÚ¶þÖÖ·½·¨ÓÅÏÈÓÚµÚÒ»ÖÖ¡£
 
 ### ²ÎÊýÉèÖÃ
-Ò»°ãµØ£¬¿ØÖÆÆ÷²ÎÊý´«ÊäÖµÊÇ²ÎÊýÕæÊµÖµµÄ1000±¶(Ò»°ãÎª0.¼¸ÖÁ¼¸)£¬×´Ì¬²ÎÊý´«ÊäÖµÊÇ²ÎÊýÕæÊµÖµµÄ100±¶(Ò»°ãÎª¼¸ÖÁ¼¸Ê®)£¬
-ÆäËü²ÎÊý±£³ÖÔ­Öµ¡£
+
+![²ÎÊýÉèÖÃ](https://github.com/xd15zhn/GroundStation/raw/master/image/GS_param.png)
+
+Ò»°ãµØ£¬¿ØÖÆÆ÷²ÎÊý´«ÊäÖµÊÇ²ÎÊýÕæÊµÖµµÄ1000±¶(Ò»°ãÎª0.¼¸ÖÁ¼¸)£¬×´Ì¬²ÎÊý´«ÊäÖµÊÇ²ÎÊýÕæÊµÖµµÄ100±¶(Ò»°ãÎª¼¸ÖÁ¼¸Ê®)¡£
+
+ÓÒ±ßÎªÎÄ±¾¿ò£¬¿É×ÔÓÉÊäÈë£¬¹Ø±ÕÖØÆôºó²»»á¶ªÊ§¡£
 
 ### ²¨ÐÎÏÔÊ¾
-²¨ÐÎÏÔÊ¾µÄÊý¾ÝÓë'²ÎÊýÉèÖÃ'±êÇ©ÖÐµÄ×´Ì¬²ÎÊýÏàÍ¬¡£
+
+![²¨ÐÎÏÔÊ¾](https://github.com/xd15zhn/GroundStation/raw/master/image/GS_chart.png)
+
+×¢ÒâÓÒÏÂ½Ç"¿ªÊ¼ÏÔÊ¾"¸´Ñ¡¿ò¡£
 
 ¸ü¸ÄÑ¡ÔñÏÔÊ¾µÄÊý¾Ý»áÇå¿Õ²¢ÖØÐÂÏÔÊ¾¡£
 
 # Ð­Òé
+
 Ð­ÒéËµÃ÷:
 
 SUMµÈÓÚ´Ó¸ÃÊý¾ÝÖ¡µÚÒ»×Ö½Ú¿ªÊ¼£¬Ò²¾ÍÊÇÖ¡Í·¿ªÊ¼£¬ÖÁ¸ÃÖ¡Êý¾ÝµÄ×îºóÒ»×Ö½ÚËùÓÐ×Ö½ÚµÄºÍµÄ×îµÍÎ»×Ö½Ú¡£
@@ -53,6 +96,7 @@ SUMµÈÓÚ´Ó¸ÃÊý¾ÝÖ¡µÚÒ»×Ö½Ú¿ªÊ¼£¬Ò²¾ÍÊÇÖ¡Í·¿ªÊ¼£¬ÖÁ¸ÃÖ¡Êý¾ÝµÄ×îºóÒ»×Ö½ÚËùÓÐ×Ö½ÚµÄº
 |Ò£¿ØÃüÁî|3E  |AA    |08  |s16¡Á4 |SUM |Ò£¿ØÆ÷4¸öÍ¨µÀµÄ¿ØÖÆÐÅºÅ|
 |²¨ÐÎ1   |3E  |B1    |08  |s16¡Á4 |SUM |²¨ÐÎÏÔÊ¾Í¨µÀ1~4|
 |²¨ÐÎ2   |3E  |B2    |08  |s16¡Á4 |SUM |²¨ÐÎÏÔÊ¾Í¨µÀ5~8|
+|ÏµÍ³±æÊ¶|40  |-     |-   |s32¡Á2 |SUM |·¢ËÍÏµÍ³±æÊ¶ËùÓÃÊý¾Ý¡Á2^16|
 
 |-   |BIT7|BIT6|BIT5    |BIT4|BIT3|BIT2|BIT1|BIT0|
 |-   |-   |-   |-       |-   |-   |-   |-   |-   |
@@ -62,18 +106,21 @@ SUMµÈÓÚ´Ó¸ÃÊý¾ÝÖ¡µÚÒ»×Ö½Ú¿ªÊ¼£¬Ò²¾ÍÊÇÖ¡Í·¿ªÊ¼£¬ÖÁ¸ÃÖ¡Êý¾ÝµÄ×îºóÒ»×Ö½ÚËùÓÐ×Ö½ÚµÄº
 
 ×¢:¹¦ÄÜ×ÖAAÎªÍâ²¿Ò£¿ØÐÅºÅÊäÈë£¬À´×ÔÓÚÓëÆäËüÊý¾ÝÖ¡²»Í¬µÄ´®¿Ú¡£
 
+40Êý¾ÝÖ¡ÓÃÓÚ·¢ËÍ¸ßËÙ¸ß¾«¶ÈÊý¾Ý£¬Ã»ÓÐ¹¦ÄÜºÍ³¤¶È×Ö½Ú
+
 ### µØÃæÕ¾->·É¿Ø
 
 |Ö¡Ãû³Æ |Ö¡Í·|¹¦ÄÜ×Ö|³¤¶È|Êý¾Ý |Ð£Ñé|±¸×¢|
 |-      |-   |-     |-   |-    |-   |-   |
 |×´Ì¬   |3C  |01    |01  |u8¡Á1 |SUM |Ö¸Áî(stat)|
-|Ò£¿Ø   |3C  |08    |08  |s16¡Á4|SUM |Ò£¿ØÆ÷4¸öÍ¨µÀµÄ¿ØÖÆÐÅºÅ|
+|Ò£¿Ø   |3C  |08    |08  |s16¡Á4|SUM |·¢ËÍÒ£¿ØÆ÷4¸öÍ¨µÀµÄ¿ØÖÆÐÅºÅ|
 |ROL²ÎÊý|3C  |A1    |08  |s16¡Á8|SUM |Ð´ÈëROLÍ¨µÀ¿ØÖÆÆ÷²ÎÊý¡Á1000|
 |PIT²ÎÊý|3C  |A2    |08  |s16¡Á8|SUM |Ð´ÈëPITÍ¨µÀ¿ØÖÆÆ÷²ÎÊý¡Á1000|
 |YAW²ÎÊý|3C  |A3    |08  |s16¡Á8|SUM |Ð´ÈëYAWºÍTHRÍ¨µÀ¿ØÖÆÆ÷²ÎÊý¡Á1000|
 |¶Á²ÎÊý1|3C  |C1    |01  |u8¡Á1 |SUM |ÇëÇó¶ÁÈ¡·ÉÐÐ²ÎÊý(req1)|
 |¶Á²ÎÊý2|3C  |C2    |01  |u8¡Á1 |SUM |ÇëÇóÐ£×¼´«¸ÐÆ÷Óë¶ÁÈ¡¿ØÖÆÆ÷²ÎÊý(req2)|
 |¶Á²ÎÊý3|3C  |C3    |01  |u8¡Á1 |SUM |ÇëÇó¶ÁÈ¡²ÎÊýÓÃÓÚÏÔÊ¾²¨ÐÎ(req3)|
+|¶Á²ÎÊý4|3C  |C4    |01  |u8¡Á1 |SUM |ÇëÇó¶ÁÈ¡ÏµÍ³±æÊ¶ËùÓÃÊý¾Ý(reg4)|
 
 |-   |BIT7      |BIT6    |BIT5  |BIT4 |BIT3 |BIT2  |BIT1 |BIT0 |
 |-   |-         |-       |-     |-    |-    |-     |-    |-    |
@@ -81,23 +128,20 @@ SUMµÈÓÚ´Ó¸ÃÊý¾ÝÖ¡µÚÒ»×Ö½Ú¿ªÊ¼£¬Ò²¾ÍÊÇÖ¡Í·¿ªÊ¼£¬ÖÁ¸ÃÖ¡Êý¾ÝµÄ×îºóÒ»×Ö½ÚËùÓÐ×Ö½ÚµÄº
 |req1|-         |-       |ËÄÔªÊý|ÓÍÃÅ |Ò£¿Ø |´«¸ÐÆ÷|×ËÌ¬ |×´Ì¬ |
 |req2|ÍÓÂÝÒÇÐ£×¼|¼Ó¼ÆÐ£×¼|-     |-    |-    |Y²ÎÊý |P²ÎÊý|R²ÎÊý|
 |req3|-         |-       |-     |-    |-    |-     |-    |-    |
+|req4|-         |-       |-     |-    |-    |-     |Î»ÖÃ1|Î»ÖÃ0|
 
-Ê¾Àý: 3C 01 01 01 3F ±íÊ¾ÇëÇó½âËø
+Ê¾Àý: 3C 01 01 41 7F ±íÊ¾ÇëÇó½âËø²¢ÉèÖÃÎª×ËÌ¬Ä£Ê½
 
-×¢:
-
-statµÄBIT7ºÍBIT6Îª10Ê±ÉèÖÃÎªËÙ¶ÈÄ£Ê½,Îª01Ê±ÉèÖÃÎª×ËÌ¬Ä£Ê½,ÆäËüÇé¿öÎÞÐ§¡£
-
-req3ÓÃÓÚ²¨ÐÎÏÔÊ¾¡£
+×¢:statµÄBIT7ºÍBIT6Îª10Ê±ÉèÖÃÎªËÙ¶ÈÄ£Ê½,Îª01Ê±ÉèÖÃÎª×ËÌ¬Ä£Ê½,ÆäËüÇé¿öÎÞÐ§¡£
 
 #µØÃæÕ¾ÊÕ·¢¾ßÌåÄÚÈÝ
+
 ¿ª·¢ÈËÔ±ÐëÖª¡£
 
 ### ·ÉÐÐ¿ØÖÆ
 
-
-
-µã»÷"½¨Á¢¿ØÖÆÁ´Â·"°´Å¥¿ªÊ¼ÒÔ100ms¼ä¸ô·¢ËÍÒ£¿ØÖ¡¡£
+µã»÷"¿ªÊ¼·¢ËÍ"°´Å¥¿ªÊ¼ÒÔ100ms¼ä¸ô·¢ËÍÒ£¿ØÖ¡¡£
 
 # ÆäËü×¢ÒâÊÂÏî
-* Ê¹ÓÃÀ¶ÑÀ´®¿ÚÊ±´æÔÚ²¿·ÖÑÓ³Ù¿¨¶ÙµÈÎÊÌâ
+
+* Ê¹ÓÃÀ¶ÑÀ´®¿ÚÊ±´æÔÚ²¿·ÖÑÓ³Ù¿¨¶ÙµÈÎÊÌâ£¬Òò´ËÇ¿ÁÒ½¨ÒéÔÚ¶Ï¿ª´®¿Ú»ò¹Ø±ÕµØÃæÕ¾Ç°ÏÈ¶Ï¿ªÏÂÎ»»úµçÔ´¡£
