@@ -16,7 +16,7 @@ namespace GroundStation
         public byte FcnByte = 0;
         private byte LenByte = 0;
         private readonly byte[] DataToSend = new byte[12];
-        private byte RxState = 0, CheckSum = 0, p = 0;
+        private byte RxState = 0, CheckSum = 0, cnt = 0;
         /*对从串口收到的数据进行预处理并将有效数据保存至RxTemp*/
         /*返回值:0,收到完整的数据帧;1,数据帧未接收完成;2,接收数据帧出错*/
         public byte Byte_Receive(byte RxData)
@@ -34,6 +34,8 @@ namespace GroundStation
                         FcnByte = CheckSum = RxData;
                         RxState = 0x11;
                     }
+                    else
+                        return 2;  //数据帧出错
                     break;
                 case 1:  //功能字校验与保存
                     CheckSum += RxData;
@@ -51,34 +53,34 @@ namespace GroundStation
                     {
                         CheckSum = 0;
                         RxState = 0;
+                        return 2;  //数据帧出错
                     }
                     break;
                 case 3:  //临时保存待用数据
                     CheckSum += RxData;
-                    DataReceived[p++] = RxData;
-                    if (p >= LenByte)
+                    DataReceived[cnt++] = RxData;
+                    if (cnt >= LenByte)
                         RxState = 0x0A;
                     break;
-                case 0x11:
+                case 0x11:  //临时保存待用数据
                     CheckSum += RxData;
-                    DataReceived[p++] = RxData;
-                    if (p >= 8)
+                    DataReceived[cnt++] = RxData;
+                    if (cnt >= 4)
                         RxState = 0x0A;
                     break;
                 case 0x0A:
                     RxState = 0;
-                    p = 0;
-                    if (CheckSum == RxData)  //收到了正确的数据帧
-                        return 0;
+                    cnt = 0;
+                    if (CheckSum == RxData)
+                        return 0;  //收到了正确的数据帧
                     else
-                        RxState = 0;
-                    break;
+                        return 2;  //数据帧出错
                 default:
-                    p = 0;
+                    cnt = 0;
                     RxState = 0;
-                    return 2;
+                    return 2;  //数据帧出错
             }
-            return 1;
+            return 1;  //数据帧尚未接收完成
         }
         /***********************
         发送解锁帧

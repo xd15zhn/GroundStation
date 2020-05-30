@@ -19,20 +19,18 @@ namespace GroundStation
 {
     partial class Form1
     {
-        private const byte DataLen = 100;
+        private const byte DataLen = 250;
         private readonly Queue<double>[] DataQueue = new Queue<double>[8];
         private readonly CheckBox[] cbxData = new CheckBox[8];
 
-        /***********************
-         图表初始化
-         **********************/
+        /*图表初始化*/
         private void ChartInit()
         {
             Color[] DataColor = new Color[]
-                {Color.Red,Color.Blue,Color.Green,Color.Orange,Color.Purple,Color.Silver,Color.Pink,Color.Cyan};
+                {Color.Red,Color.Blue,Color.Green,Color.Orange,Color.Purple,Color.MediumSeaGreen,Color.Pink,Color.Cyan};
             chart1.Series.Clear();
             stat.ChartFirst = true;
-            chart1.ChartAreas[0].AxisX.Interval = 5;
+            chart1.ChartAreas[0].AxisX.Interval = 10;
             chart1.ChartAreas[0].AxisX.MajorGrid.LineColor = Color.Silver;
             chart1.ChartAreas[0].AxisY.MajorGrid.LineColor = Color.Silver;
             Series[] series = new Series[8];
@@ -53,13 +51,12 @@ namespace GroundStation
                 chart1.Series[i].ChartType = SeriesChartType.Line;
             }
         }
+        /*清空图表避免各通道不同步*/
         private void cbxData_CheckedChanged(object sender, EventArgs e)
         {
                 Chart_Clear();
         }
-        /***********************
-        图表更新
-        **********************/
+        /*图表更新*/
         private void Chart_Update(double data, int LineLabel)
         {
             if (DataQueue[LineLabel].Count >= DataLen)
@@ -74,7 +71,7 @@ namespace GroundStation
                     chart1.ChartAreas[0].AxisY.Minimum = data - 0.01;
                     stat.ChartFirst = false;
                 }
-                if (data > chart1.ChartAreas[0].AxisY.Maximum)
+                else if (data > chart1.ChartAreas[0].AxisY.Maximum)
                     chart1.ChartAreas[0].AxisY.Maximum = data;
                 else if (data < chart1.ChartAreas[0].AxisY.Minimum)
                     chart1.ChartAreas[0].AxisY.Minimum = data;

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.IO;
 using System.Text;
+using System.Windows.Forms;
 
 namespace GroundStation
 {
@@ -26,8 +27,15 @@ namespace GroundStation
         }
         public void Write_File()
         {
-            fs.Flush();
-            fs.Close();
+            try
+            {
+                fs.Flush();
+                fs.Close();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

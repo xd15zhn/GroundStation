@@ -24,10 +24,6 @@ namespace GroundStation
             cbxBaudRate2.Text = Properties.Settings.Default.cbxBaudRate2Str;
             tbxInterval.Text = Properties.Settings.Default.tbxIntervalStr;
             tbxNotepad.Text = Properties.Settings.Default.tbxNotepadstr;
-            rc[0] = new Filter();
-            rc[1] = new Filter();
-            rc[2] = new Filter();
-            rc[3] = new Filter();
         }
         /*窗口关闭保存软件设置*/
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)

@@ -63,7 +63,6 @@
             this.lblCtrlPit = new System.Windows.Forms.Label();
             this.lblCtrlRol = new System.Windows.Forms.Label();
             this.lblCtrlYaw = new System.Windows.Forms.Label();
-            this.btnOpen2 = new System.Windows.Forms.Button();
             this.cbxMotor = new System.Windows.Forms.CheckBox();
             this.label14 = new System.Windows.Forms.Label();
             this.cbxBaudRate2 = new System.Windows.Forms.ComboBox();
@@ -110,6 +109,7 @@
             this.vScrollThr = new System.Windows.Forms.VScrollBar();
             this.hScrollRol = new System.Windows.Forms.HScrollBar();
             this.hScrollYaw = new System.Windows.Forms.HScrollBar();
+            this.btnOpen2 = new System.Windows.Forms.Button();
             this.btnCtrl = new System.Windows.Forms.Button();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tbxNotepad = new System.Windows.Forms.TextBox();
@@ -145,15 +145,18 @@
             this.btnClearBuf = new System.Windows.Forms.Button();
             this.btnReCnt = new System.Windows.Forms.Button();
             this.tmrCtrl = new System.Windows.Forms.Timer(this.components);
-            this.btnOpen1 = new System.Windows.Forms.Button();
             this.tmrPortRcv = new System.Windows.Forms.Timer(this.components);
             this.serialPort2 = new System.IO.Ports.SerialPort(this.components);
+            this.imgBitErr = new System.Windows.Forms.PictureBox();
+            this.btnOpen1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
             this.tabPage4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBitErr)).BeginInit();
             this.SuspendLayout();
             // 
             // serialPort1
@@ -392,7 +395,6 @@
             this.tabPage2.Controls.Add(this.lblCtrlPit);
             this.tabPage2.Controls.Add(this.lblCtrlRol);
             this.tabPage2.Controls.Add(this.lblCtrlYaw);
-            this.tabPage2.Controls.Add(this.btnOpen2);
             this.tabPage2.Controls.Add(this.cbxMotor);
             this.tabPage2.Controls.Add(this.label14);
             this.tabPage2.Controls.Add(this.cbxBaudRate2);
@@ -439,6 +441,7 @@
             this.tabPage2.Controls.Add(this.vScrollThr);
             this.tabPage2.Controls.Add(this.hScrollRol);
             this.tabPage2.Controls.Add(this.hScrollYaw);
+            this.tabPage2.Controls.Add(this.btnOpen2);
             this.tabPage2.Controls.Add(this.btnCtrl);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Name = "tabPage2";
@@ -513,19 +516,6 @@
             this.lblCtrlYaw.Size = new System.Drawing.Size(31, 15);
             this.lblCtrlYaw.TabIndex = 21;
             this.lblCtrlYaw.Text = "500";
-            // 
-            // btnOpen2
-            // 
-            this.btnOpen2.Image = global::GroundStation.Properties.Resources.ledoff;
-            this.btnOpen2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnOpen2.Location = new System.Drawing.Point(1065, 174);
-            this.btnOpen2.Name = "btnOpen2";
-            this.btnOpen2.Size = new System.Drawing.Size(140, 40);
-            this.btnOpen2.TabIndex = 2;
-            this.btnOpen2.Text = "打开连接";
-            this.btnOpen2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnOpen2.UseVisualStyleBackColor = true;
-            this.btnOpen2.Click += new System.EventHandler(this.btnOpen2_Click);
             // 
             // cbxMotor
             // 
@@ -1009,6 +999,19 @@
             this.hScrollYaw.TabIndex = 2;
             this.hScrollYaw.Value = 50;
             // 
+            // btnOpen2
+            // 
+            this.btnOpen2.Image = global::GroundStation.Properties.Resources.ledoff;
+            this.btnOpen2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.btnOpen2.Location = new System.Drawing.Point(1065, 174);
+            this.btnOpen2.Name = "btnOpen2";
+            this.btnOpen2.Size = new System.Drawing.Size(140, 40);
+            this.btnOpen2.TabIndex = 2;
+            this.btnOpen2.Text = "打开连接";
+            this.btnOpen2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnOpen2.UseVisualStyleBackColor = true;
+            this.btnOpen2.Click += new System.EventHandler(this.btnOpen2_Click);
+            // 
             // btnCtrl
             // 
             this.btnCtrl.Image = global::GroundStation.Properties.Resources.ledoff;
@@ -1303,7 +1306,7 @@
             // labelTxCnt
             // 
             this.labelTxCnt.AutoSize = true;
-            this.labelTxCnt.Location = new System.Drawing.Point(598, 669);
+            this.labelTxCnt.Location = new System.Drawing.Point(553, 669);
             this.labelTxCnt.Name = "labelTxCnt";
             this.labelTxCnt.Size = new System.Drawing.Size(39, 15);
             this.labelTxCnt.TabIndex = 14;
@@ -1312,7 +1315,7 @@
             // labelRxCnt
             // 
             this.labelRxCnt.AutoSize = true;
-            this.labelRxCnt.Location = new System.Drawing.Point(598, 694);
+            this.labelRxCnt.Location = new System.Drawing.Point(553, 694);
             this.labelRxCnt.Name = "labelRxCnt";
             this.labelRxCnt.Size = new System.Drawing.Size(39, 15);
             this.labelRxCnt.TabIndex = 14;
@@ -1320,7 +1323,7 @@
             // 
             // btnClearBuf
             // 
-            this.btnClearBuf.Location = new System.Drawing.Point(370, 669);
+            this.btnClearBuf.Location = new System.Drawing.Point(325, 669);
             this.btnClearBuf.Name = "btnClearBuf";
             this.btnClearBuf.Size = new System.Drawing.Size(115, 40);
             this.btnClearBuf.TabIndex = 3;
@@ -1330,7 +1333,7 @@
             // 
             // btnReCnt
             // 
-            this.btnReCnt.Location = new System.Drawing.Point(491, 669);
+            this.btnReCnt.Location = new System.Drawing.Point(446, 669);
             this.btnReCnt.Name = "btnReCnt";
             this.btnReCnt.Size = new System.Drawing.Size(101, 40);
             this.btnReCnt.TabIndex = 4;
@@ -1342,6 +1345,20 @@
             // 
             this.tmrCtrl.Enabled = true;
             this.tmrCtrl.Tick += new System.EventHandler(this.tmrCtrl_Tick);
+            // 
+            // tmrPortRcv
+            // 
+            this.tmrPortRcv.Interval = 10;
+            this.tmrPortRcv.Tick += new System.EventHandler(this.tmrPortRcv_Tick);
+            // 
+            // imgBitErr
+            // 
+            this.imgBitErr.Image = global::GroundStation.Properties.Resources.error;
+            this.imgBitErr.Location = new System.Drawing.Point(662, 670);
+            this.imgBitErr.Name = "imgBitErr";
+            this.imgBitErr.Size = new System.Drawing.Size(40, 40);
+            this.imgBitErr.TabIndex = 15;
+            this.imgBitErr.TabStop = false;
             // 
             // btnOpen1
             // 
@@ -1356,16 +1373,23 @@
             this.btnOpen1.UseVisualStyleBackColor = true;
             this.btnOpen1.Click += new System.EventHandler(this.btnOpen1_Click);
             // 
-            // tmrPortRcv
+            // label7
             // 
-            this.tmrPortRcv.Interval = 10;
-            this.tmrPortRcv.Tick += new System.EventHandler(this.tmrPortRcv_Tick);
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label7.Location = new System.Drawing.Point(712, 682);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(37, 15);
+            this.label7.TabIndex = 16;
+            this.label7.Text = "误码";
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1262, 721);
+            this.Controls.Add(this.label7);
+            this.Controls.Add(this.imgBitErr);
             this.Controls.Add(this.btnReCnt);
             this.Controls.Add(this.btnClearBuf);
             this.Controls.Add(this.labelRxCnt);
@@ -1397,6 +1421,7 @@
             this.tabPage4.ResumeLayout(false);
             this.tabPage4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.imgBitErr)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1519,6 +1544,8 @@
         private System.Windows.Forms.CheckBox cbxDisplay;
         private System.Windows.Forms.CheckBox cbxFileWrite;
         private System.Windows.Forms.TextBox tbxNotepad;
+        private System.Windows.Forms.PictureBox imgBitErr;
+        private System.Windows.Forms.Label label7;
     }
 }
 

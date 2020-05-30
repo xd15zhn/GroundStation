@@ -63,17 +63,15 @@ namespace GroundStation
         }
         private void cbxFileWrite_CheckedChanged(object sender, EventArgs e)
         {
-            if (dataFile == null)
-                dataFile = new FileWrite();
             if (cbxFileWrite.Checked)
             {
+                dataFile = new FileWrite();
                 TxCount += ptcl1.Send_Req(0xC4, 0x03, SerialPort1_Send);
             }
             else
             {
                 TxCount += ptcl1.Send_Req(0xC4, 0, SerialPort1_Send);
                 dataFile.Write_File();
-                
             }
             labelTxCnt.Text = $"Tx:{TxCount}";
         }

@@ -67,11 +67,15 @@ namespace GroundStation
                 }
                 DataAdd1++;
                 if (state == 0)
+                {
                     Data_Receive_Precess(ptcl1);
+                    imgBitErr.Image = Properties.Resources.correct;
+                }
                 else if (state == 2)
                 {
                     lblCtrl.Text = "失控";
                     lblCtrl.ForeColor = Color.Red;
+                    imgBitErr.Image = Properties.Resources.error;
                 }
             }
             RxCount += DataAdd1;
@@ -92,7 +96,12 @@ namespace GroundStation
                 }
                 DataAdd2++;
                 if (state == 0)
+                {
                     Data_Receive_Precess(ptcl2);
+                    imgBitErr.Image = Properties.Resources.correct;
+                }
+                else if (state == 2)
+                    imgBitErr.Image = Properties.Resources.error;
             }
             RxCount += DataAdd2;
             labelRxCnt.Text = $"Rx:{RxCount}";

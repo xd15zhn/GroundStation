@@ -24,7 +24,7 @@ namespace GroundStation
     public partial class Form1 : Form
     {
         private string[] LastPorts = { };
-        private const string version = "Ground Station V1.02";
+        private const string version = "Ground Station V1.03";
         private long TxCount = 0, RxCount = 0;
         private readonly Protocol ptcl1 = new Protocol();
         private readonly Protocol ptcl2 = new Protocol();
@@ -38,6 +38,10 @@ namespace GroundStation
             lblVersion.Text = version;
             ChartInit();
             Form1_Init();
+            rc[0] = new Filter();
+            rc[1] = new Filter();
+            rc[2] = new Filter();
+            rc[3] = new Filter();
         }
         /*开闭主串口按钮*/
         private void btnOpen1_Click(object sender, EventArgs e)
