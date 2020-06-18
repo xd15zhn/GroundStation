@@ -1,5 +1,6 @@
 # 西电航协地面站PC端
 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/cab9a4a8520d420494ff6452de7faea0)](https://app.codacy.com/manual/xd15zhn/GroundStation?utm_source=github.com&utm_medium=referral&utm_content=xd15zhn/GroundStation&utm_campaign=Badge_Grade_Dashboard)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/090e9b44b3934c0483ee238f9ae0fdff)](https://app.codacy.com/gh/xdu-aero-association/GroundStation?utm_source=github.com&utm_medium=referral&utm_content=xdu-aero-association/GroundStation&utm_campaign=Badge_Grade_Dashboard)
 
 ## Status
