@@ -1,11 +1,14 @@
 # 西电航协地面站PC端
 
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/cab9a4a8520d420494ff6452de7faea0)](https://app.codacy.com/manual/xd15zhn/GroundStation?utm_source=github.com&utm_medium=referral&utm_content=xd15zhn/GroundStation&utm_campaign=Badge_Grade_Dashboard)
-[![Codacy Badge](https://api.codacy.com/project/badge/Grade/090e9b44b3934c0483ee238f9ae0fdff)](https://app.codacy.com/gh/xdu-aero-association/GroundStation?utm_source=github.com&utm_medium=referral&utm_content=xdu-aero-association/GroundStation&utm_campaign=Badge_Grade_Dashboard)
 
 ## Status
 
-![stars](https://img.shields.io/github/stars/xdu-aero-association/GroundStation.svg) ![forks](https://img.shields.io/github/forks/xdu-aero-association/GroundStation.svg) ![tag](https://img.shields.io/github/tag/xdu-aero-association/GroundStation.svg) ![release](https://img.shields.io/github/release/xdu-aero-association/GroundStation.svg) ![issues](https://img.shields.io/github/issues/xdu-aero-association/GroundStation.svg)
+![stars](https://img.shields.io/github/stars/xd15zhn/GroundStation.svg)
+![forks](https://img.shields.io/github/forks/xd15zhn/GroundStation.svg)
+![tag](https://img.shields.io/github/tag/xd15zhn/GroundStation.svg)
+![release](https://img.shields.io/github/release/xd15zhn/GroundStation.svg)
+![issues](https://img.shields.io/github/issues/xd15zhn/GroundStation.svg)
 
 ## Overview
 
